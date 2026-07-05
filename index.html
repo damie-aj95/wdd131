@@ -3,9 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals course landing page by Damilare Samuel Ajayi featuring web design fundamentals, personal projects, and resources.">
+    <meta name="author" content="Damilare Samuel Ajayi">
+    <title>WDD 131 – Dynamic Web Fundamentals – Damilare Samuel Ajayi</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Titillium+Web:ital,wght@0,400;1,600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Wdd131 | Damilare Samuel</h1>
+    <header>
+        <span id="course-title">
+            WDD 131 – Dynamic Web Fundamentals
+        </span>
+        <nav>
+          <ul>
+            <li><a href="https://www.linkedin.com/in/damilare-samuel-ajayi-2b738a356/">LinkedIn</a></li>
+            <li><a href="https://byupw.instructure.com/">Canvas</a></li>
+            <li><a href="https://www.churchofjesuschrist.org/study/scriptures">Scripture</a></li>
+            <li><a href="#">Final Projects</a></li>
+          </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Damilare Samuel Ajayi</h1>
+
+        <section class="card">
+            <h2>About Me</h2>
+            <img src="images/profile.jpg" alt="Damilare Samuel Ajayi">
+            <p>
+                I'm a web design student currently working through WDD 131 – Dynamic Web 
+            Fundamentals, with a growing passion for front-end development — building 
+            clean, functional interfaces and learning how design and code come together. 
+            Alongside coding, I work at Ballers Market, a sneaker and footwear resale 
+            business, where I handle social media content and manage packaging and 
+            shipping for orders.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Lagos, Nigeria</h2>
+            <img src="images/Flag_of_Nigeria.jpg" alt="Flag of Nigeria">
+            <p>
+                Lagos is Nigeria's largest city and its commercial hub, known for its fast-paced 
+            energy, bustling markets, and vibrant creative scene. It sits along the Atlantic 
+            coast in southwestern Nigeria and is one of the fastest-growing cities in Africa, 
+            home to a mix of business, culture, and entertainment industries.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Damilare Samuel Ajayi | Lagos, Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>
