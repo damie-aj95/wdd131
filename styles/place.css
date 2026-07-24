@@ -1,0 +1,143 @@
+:root {
+  --color-red: #d52b1e;
+  --color-white: #ffffff;
+  --color-dark: #1a1a1a;
+  --color-gray-light: #f4f4f4;
+  --font-heading: "Helvetica Neue", Arial, sans-serif;
+  --font-body: Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-dark);
+  background-color: var(--color-white);
+}
+
+header {
+  background-color: var(--color-red);
+  color: var(--color-white);
+  text-align: center;
+  padding: 1rem;
+}
+
+header h1 {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+picture img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.data,
+.weather {
+  padding: 1rem;
+}
+
+.data h2,
+.weather h2 {
+  color: var(--color-red);
+  border-bottom: 2px solid var(--color-red);
+  padding-bottom: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.data p,
+.weather p {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.35rem 0;
+  border-bottom: 1px solid var(--color-gray-light);
+}
+
+.weather img {
+  width: 40px;
+  height: 40px;
+  display: block;
+  margin: 0 auto 0.75rem;
+}
+
+footer {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 1rem;
+}
+
+footer p:first-child {
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 600px) {
+    main {
+        position: relative;
+        padding: 0;
+    }
+
+    picture {
+        display: block;
+    }
+
+    picture img {
+        width: 100%;
+        height: 80vh;
+        object-fit: cover;
+    }
+
+    .data, .weather {
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.9);
+        width: clamp(200px, 25%, 260px);
+        padding: 0;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .data {
+        top: 1.5rem;
+        left: 1.5rem;
+    }
+
+    .weather {
+        bottom: 1.5rem;
+        right: 1.5rem;
+    }
+
+    .data h2, .weather h2 {
+        background-color: var(--color-red);
+        color: var(--color-white);
+        padding: 0.6rem 1rem;
+        margin-bottom: 0;
+        border-bottom: none;
+    }
+
+    .data p, .weather p {
+        padding: 0.35rem;
+    }
+
+    .weather img {
+        display: none;
+    }
+
+    .weather h2::after {
+        content: "⛅";
+        font-size: 1.2rem;
+        margin-left: 0.5rem;
+    }
+
+
+   
+}
