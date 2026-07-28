@@ -1,0 +1,25 @@
+img {
+    width: 100%;
+    background: black;
+    animation: fade 15s;
+}
+
+h1 {
+    text-align: center;
+}
+
+main {
+    margin: 0 auto;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
