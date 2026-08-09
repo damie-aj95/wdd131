@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse authentic sneakers available at Ballers Market — real pairs, real prices.">
+  <meta name="author" content="Damilare Samuel Ajayi">
+  <title>Ballers Market — Shop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="scripts/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">Ballers Market</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About &amp; Contact</a></li>
+                </ul>
+            </nav>
+    </header>
+
+    <main>
+        <section class="shop-intro">
+            <h1>Shop Sneakers</h1>
+            <p>Browse our current selection of authentic sneakers, ready to buy and wear.</p>
+        </section>
+
+        <section class="shop-list">
+            <div class="filters">
+                <button class="filter-btn active" data-category="All">All</button>
+                <button class="filter-btn" data-category="Sneakers">Sneakers</button>
+                <button class="filter-btn" data-category="Basketball Shoes">Basketball Shoes</button>
+                <button class="filter-btn" data-category="Slides">Slides</button>
+                <button class="filter-btn" data-category="Crocs">Crocs</button>
+                <button class="filter-btn" data-category="Socks">Socks</button>
+            </div>
+            <div id="sneaker-list" class="sneaker-grid">
+                <!-- Sneaker cards rendered here by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Ballers Market</p>
+        <p><a href="reference.html">References</a></p>
+        <p>Last updated: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>
