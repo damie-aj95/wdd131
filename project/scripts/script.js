@@ -46,6 +46,7 @@ document.addEventListener("click", function (e) {
     }
 
     localStorage.setItem("favorites", JSON.stringify(favorites));
+    renderFavorites();
   }
 });
 
@@ -67,3 +68,35 @@ document.addEventListener("click", function (e) {
 
 renderSneakers(sneakers.slice(0, 3), "featured-list");
 renderSneakers(sneakers, "sneaker-list");
+renderFavorites();
+
+function renderFavorites() {
+  const container = document.getElementById("favorites-list");
+  if (!container) return;
+
+  const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+  const savedItems = sneakers.filter(item => favorites.includes(item.name));
+
+  container.innerHTML = savedItems.length
+    ? savedItems.map(item => {
+        const message = encodeURIComponent(`Hi, I'd like to order the ${item.name} (${item.price}) from Ballers Market.`);
+        return `
+          <div class="sneaker-card">
+            <img src="${item.image}" alt="${item.name}" loading="lazy">
+            <h3>${item.name}</h3>
+            <p>${item.price}</p>
+            <a href="https://wa.me/2349122149932?text=${message}" target="_blank" rel="noopener" class="btn">Order via WhatsApp</a>
+          </div>
+        `;
+      }).join('')
+    : `<p>No favorites saved yet.</p>`;
+}
+
+const menuToggle = document.getElementById("menu-toggle");
+if (menuToggle) {
+  menuToggle.addEventListener("click", function () {
+    const navList = document.querySelector("nav ul");
+    navList.classList.toggle("show");
+    menuToggle.textContent = navList.classList.contains("show") ? "✕" : "☰";
+  });
+}

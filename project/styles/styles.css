@@ -171,6 +171,15 @@ button[type="submit"] {
   width: fit-content;
 }
 
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #2ecc71;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
 footer {
   text-align: center;
   padding: 1.5rem;
@@ -188,5 +197,14 @@ footer {
         flex-direction: column;
         text-align: center;
         gap: 0.75rem;
+        display: none;
+        width: 100%;
+    }
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul.show {
+        display: flex;
     }
 }
