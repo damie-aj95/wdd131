@@ -16,11 +16,12 @@ function renderSneakers(list, containerId) {
 
   const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
-  container.innerHTML = list.map(item => {
+  container.innerHTML = list.map((item, index) => {
     const isSaved = favorites.includes(item.name);
+    const loadingAttr = index === 0 ? "" : `loading="lazy"`;
     return `
       <div class="sneaker-card">
-        <img src="${item.image}" alt="${item.name}" loading="lazy">
+        <img src="${item.image}" alt="${item.name}" ${loadingAttr}>
         <h3>${item.name}</h3>
         <p>${item.category}</p>
         <p>${item.price}</p>
